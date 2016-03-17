@@ -1,0 +1,28 @@
+{
+  "name": "angular-material-bower",
+  "homepage": "https://github.com/izbq1102/angular-material-bower",
+  "description": "angular material changed by custom",
+  "main": [
+    'angular-material.js',
+    'angular-material.css'
+  ],
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "material",
+    "custom",
+    "angular-material"
+  ],
+  "authors": [
+    "HUY"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
