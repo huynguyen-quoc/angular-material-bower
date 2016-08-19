@@ -4635,6 +4635,34 @@ md-nav-extra-content {
   padding-right: 12px;
 }
 
+$progress-circular-indeterminate-duration: 2.9s !default;
+
+@keyframes indeterminate-rotate {
+    0%       { transform: rotate(0deg); }
+    100%     { transform: rotate(360deg); }
+}
+
+// Used to avoid unnecessary layout
+md-progress-circular {
+    position: relative;
+    display: block;
+
+    &._md-progress-circular-disabled {
+        visibility: hidden;
+    }
+
+    &.md-mode-indeterminate svg {
+        animation: indeterminate-rotate $progress-circular-indeterminate-duration linear infinite;
+    }
+
+    svg {
+        position: absolute;
+        overflow: visible;
+        top: 0;
+        left: 0;
+    }
+}
+
 .md-panel-outer-wrapper {
   height: 100%;
   left: 0;
@@ -4702,34 +4730,6 @@ md-nav-extra-content {
   &._md-opaque-leave {
     transition: opacity $material-leave-duration $material-leave-timing-function;
   }
-}
-
-$progress-circular-indeterminate-duration: 2.9s !default;
-
-@keyframes indeterminate-rotate {
-    0%       { transform: rotate(0deg); }
-    100%     { transform: rotate(360deg); }
-}
-
-// Used to avoid unnecessary layout
-md-progress-circular {
-    position: relative;
-    display: block;
-
-    &._md-progress-circular-disabled {
-        visibility: hidden;
-    }
-
-    &.md-mode-indeterminate svg {
-        animation: indeterminate-rotate $progress-circular-indeterminate-duration linear infinite;
-    }
-
-    svg {
-        position: absolute;
-        overflow: visible;
-        top: 0;
-        left: 0;
-    }
 }
 
 $progress-linear-bar-height: 5px !default;
